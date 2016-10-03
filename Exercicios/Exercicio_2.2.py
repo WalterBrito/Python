@@ -7,8 +7,8 @@ Imprima a soma desses dois numeros na tela.
 
 print("="*60)
 
-a = int(input("Digite um numero: "))
-b = int(input("Digite um numero: "))
+a = int(input("Digite o primeiro numero: "))
+b = int(input("Digite o segundo numero: "))
 
 print("A soma dos numeros: ", (a + b))
 
