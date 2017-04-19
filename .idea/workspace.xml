@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f80f1a15-69c4-468b-9e99-a1633b209a41" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tasks/task10.py" afterPath="$PROJECT_DIR$/Tasks/task10.py" />
-    </list>
+    <list default="true" id="f80f1a15-69c4-468b-9e99-a1633b209a41" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
