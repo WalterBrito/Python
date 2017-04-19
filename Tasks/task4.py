@@ -1,13 +1,13 @@
-# Create a program that asks the user for a number and then prints out a list of
-# all the divisors of that number. (If you don't know what a divisor is, it is a
-# number that divides evenly into another number. For example, 13 is a divisor of
-# 26 because 26 / 13 has no remainder.)
+# A palindromic number reads the same both ways. The largest palindrome made
+# from the product of two 2-digit numbers is 9009 = 91 * 99.
+# Find the largest palindrome made from the product of two 3-digit numbers.
 
-number = int(input("Type a number: "))
-numberList = []
-
-for i in range(1, number / 2):
-    if number % i == 0:
-        numberList.append(i)
-
-print(numberList)
+n = 0
+for a in range(999, 100, -1):
+    for b in range(a, 100, -1):
+        x = a * b
+        if x > n:
+            s = str(a * b)
+            if s == s[::-1]:
+                n = a * b
+print(n)
