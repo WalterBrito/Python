@@ -1,11 +1,15 @@
-# 2520 is the smallest number that can be divided by each of the numbers
-# from 1 to 10 without any remainder. What is the smallest positive number
-# that is evenly divisible by all of the numbers from 1 to 20?
+# A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
+#
+# a2 + b2 = c2
+# For example, 32 + 42 = 9 + 16 = 25 = 52.
+#
+# There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+# Find the product abc.
+for a in range(3, 1000):
+    for b in range(a + 1, 999):
+        cSquared = a ** 2 + b ** 2
+        c = cSquared ** 0.5
 
-def gcd(x, y): return y and gcd(y, x % y) or x
-def lcm(x, y): return x * y / gcd(x, y)
-
-n = 1
-for i in range(1, 21):
-    n = lcm(n, i)
-print(n)
+        if a + b + c == 1000:
+            product = a * b * c
+            print("Product abc: %d" % product)

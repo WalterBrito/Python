@@ -1,13 +1,15 @@
-# Create a program that asks the user to enter their name and their age. Print
-# out a message addressed to them that tells them the year that they will turn
-# 100 years old.
+# If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
+# 3, 5, 6 and 9. The sum of these multiples is 23.
+# Find the sum of all the multiples of 3 or 5 below 1000.
+#
 
-name = input("Type your name: ").capitalize()
-age = int(input("Type your age: "))
-birthday = int(input("Type your birthday: "))
+def sumMultiples():
+    result = 0
+    # iterate 0 until 1000
+    for i in range(1001):
+        # Append multiple of 3 in multiple3
+        if not (i % 3) or not (i % 5):
+            result += i
+    print("Sum: %d" % result)
 
-yearNow = 2017
-ageNow = (yearNow - birthday)
-age100 = ((yearNow - age) + 100)
-print("You have %d years old." % ageNow)
-print("%s you will be 100 year old in %d." % (name, age100))
+sumMultiples()

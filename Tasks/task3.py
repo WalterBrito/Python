@@ -1,26 +1,11 @@
-# Take a list, say for example this one:
-# a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] and write a program that prints out
-# all the elements of the list that are less than 5.
-#
-# Extras:
-#
-# 1. Instead of printing the elements one by one, make a new list that has all the
-# elements less than 5 from this list in it and print out this new list.
-# 2. Write this in one line of Python.
-# 3. Ask the user for a number and return a list that contains only elements from the
-# original list a that are smaller than that number given by the user.
+# The prime factors of 13195 are 5, 7, 13 and 29.
+# What is the largest prime factor of the number 600851475143 ?
 
-a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-b = []
-user = int(input("Type a number: "))
-c = []
+num = 600851475143
+i = 2
+while i * i < num:
+    while num % i == 0:
+        num /= i
+    i += 1
+print("Largest Factor: %d" % num)
 
-for i in a:
-    if i < 5:
-        b.append(i)
-    if i < user :
-        c.append(i)
-
-print("Original list: ", a)
-print("Less than 5: ", b)
-print("Less than user type: ", c)
