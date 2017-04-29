@@ -1,31 +1,39 @@
-# Empty dictionary to store expenses and values to being pay
-expensesNameValue = {}
+# Função para controlar salário
+def controleSalario():
+    # Dicionário vazio par armazenar as conats com seus valores
+    contasPagar = {}
 
-# Get the user salary
-salary = float(input("Enter the salary balance (ex: 1980.58 ): "))
+    # Recebe o valor do salário do usuário
+    salario = float(input("Digite o valor do salário (ex: 1980.58 ): "))
+    print('\n')
 
-# Loop info about user expanses
-while True:
-    # User enter the expenses and salary
-    expenses = input("Enter the name os the expense (ex: bag): ").capitalize()
-    expensesCharge = float(input("Enter the charge value (ex: 52.90): "))
-    finish = input('Do you want exit? (y or n): ').lower()
+    total = 0
+    # Pede informações do usuário até que digite s (Sair)
+    while True:
+        # User enter the expenses and salary
+        gastos = input("Digite o nome do gasto á pagar (ex: Conta de luz): ").capitalize()
+        valorConta = float(input("Digite o valor do gasto á pagar (ex: 52.90): "))
+        sair = input('Deseja continuar? (S-Sim ou N-Não): ').lower()
+        print('\n')
 
-    # Exit the program when user finished to enter expenses
-    if finish == 'y':
-        break
+        if True:
+            contasPagar[gastos] = valorConta
+            total += valorConta
+        else:
+            print('Opção Inválida!\n Tente novamente.')
 
-    if True:
-        expensesNameValue[expenses] = expensesCharge
-    else:
-        print('What your type is not an valid option!\n Try again!')
+        # Sai do programa quando usuário pressiona s
+        if sair == 'n':
+            break
 
-print('========== Your Expenses ==========\n')
-for key, value in expensesNameValue.items():
-    print("{}: {}".format(key, value))
-print('=' * 35)
+    print('========== Seus Gastos ==========\n')
+    for key, value in contasPagar.items():
+        print("{}: R${}".format(key, value))
+    print('Total: R$%d Reais' % total)
+    print('\nObrigado!')
+    print('=' * 35)
 
-
+controleSalario()
 
 
 
