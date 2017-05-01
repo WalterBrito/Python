@@ -1,10 +1,13 @@
+# Cria arquivos com os gastos em um arquivo txt
+arquivo = 'gastos.txt'
+
 # Função para controlar salário
 def controleSalario():
     # Dicionário vazio par armazenar as conats com seus valores
     contasPagar = {}
 
     # Recebe o valor do salário do usuário
-    salario = float(input("Digite o valor do salário (ex: 1980.58 ): "))
+    salario = float(input("Digite o valor do salário (ex: 1980.58): "))
     print('\n')
 
     total = 0
@@ -30,8 +33,12 @@ def controleSalario():
     for key, value in contasPagar.items():
         print("{}: R${}".format(key, value))
     print('Total: R$%d Reais' % total)
-    print('\nObrigado!')
-    print('=' * 35)
+    print('Obrigado!\n')
+
+    # Escreve os gastos no arquivo txt criado.
+    arquivo_txt = open(arquivo, 'w')
+    for key in contasPagar:
+        arquivo_txt.write("%s: %f\n" % (key, contasPagar[key]))
 
 controleSalario()
 
